@@ -33,6 +33,8 @@
 //입국 심사 자동화 기기
 //상대방의 이름, 나이, 국적, 키, 몸무게, 언제 돌아갈 것인지, 현재 입국 허가 여부
 //print 어느나라의 몇 살인 누구는 입국이 validate(bool)(허가)되었습니다.
+import 'dart:io';
+
 void main(){
   final bool validate = true;
 
@@ -49,4 +51,10 @@ int heAge(){
 
 String heName(){
 return '김태규';
+}
+
+void inputFunc() {
+  stdout.write("Enter your name : ");
+  var name = stdin.readLineSync();
+  print(name);
 }
