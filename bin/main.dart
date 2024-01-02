@@ -1,60 +1,66 @@
-// void main(){
-  //타입
-  // final String name = 'peach';
-  // final int age = 25;
-  // final double height = 165.4;
-  // final bool isMarried = false;
+ import 'dart:io';
 
-  // final List<String> hobbies = ['Reading', 'Coding', 'Gaming'];
-  // final Map<String, dynamic> person = {'name' : 'John'};
+  // void inputFunc() {
+  //   stdout.write("Enter your name : \n");
+  //   stdout.write("Enter your age : \n");
+  //   stdout.write("Enter your country : \n");
+  //   stdout.write("Enter your tall : \n");
+  //   stdout.write("Enter your wight : \n");
+  //   stdout.write("When will you go back? : \n");
+  //   stdout.write("Would you like to enter the country? : ");
+  //   var name = stdin.readLineSync();
+  //   print(name);
+  // }
+ String? inputFuncName() {
+   stdout.write("Enter your name : ");
+   var name = stdin.readLineSync();
+   return name;
+ }
+ String? inputFuncAge() {
+   stdout.write("Enter your age : ");
+   var age = stdin.readLineSync();
+   return age;
+ }
+ String? inputFuncCountry() {
+   stdout.write("Enter your country : ");
+   var country = stdin.readLineSync();
+   return country;
+ }
+ String? inputFuncTall() {
+   stdout.write("Enter your tall : ");
+   var tall = stdin.readLineSync();
+   return tall;
+ }
+ String? inputFuncWight() {
+   stdout.write("Enter your wight : ");
+   var wight = stdin.readLineSync();
+   return wight;
+ }
+ String? inputFuncGo() {
+   stdout.write("When will you return? : ");
+   var go = stdin.readLineSync();
+   return go;
+ }
+ String? inputFuncEnter() {
+   stdout.write("Would you like to enter the country? : ");
+   var enter = stdin.readLineSync();
+   return enter;
+ }
 
-  // print(name);
-  // print(age);
-  // print(height);
-  // print(isMarried);
-  // print(hobbies);
-  // print(person['name']);
+  void main(){
+    final String? name = inputFuncName();
+    final String? age = inputFuncAge();
+    final String? country = inputFuncCountry();
+    final String ok = '입국이 허가 되었습니다.';
 
-// print('main 입니다');
-// main2(2);
-// main3(3);
+    final String? tall = inputFuncTall();
+    final String? wight = inputFuncWight();
+    final String? go = inputFuncGo();
+    final String? enter = inputFuncEnter();
 
-// }
 
-//함수
-// void main2(int number){
-// print (number);
-// }
+    final String full = '$name $age $country $ok';
 
-// void main3(int number){
+    print(full);
+  }
 
-// }
-
-//입국 심사 자동화 기기
-//상대방의 이름, 나이, 국적, 키, 몸무게, 언제 돌아갈 것인지, 현재 입국 허가 여부
-//print 어느나라의 몇 살인 누구는 입국이 validate(bool)(허가)되었습니다.
-import 'dart:io';
-
-void main(){
-  final bool validate = true;
-
-  print({heCountry(), heAge(), heName(), validate});
-}
-
-String heCountry(){
-  return 'Korea';
-}
-
-int heAge(){
-  return 24;
-}
-
-String heName(){
-return '김태규';
-}
-
-void inputFunc() {
-  stdout.write("Enter your name : ");
-  var name = stdin.readLineSync();
-  print(name);
-}
